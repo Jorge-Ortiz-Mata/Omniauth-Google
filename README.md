@@ -37,10 +37,10 @@ Go to routes.rb and set a page as the root of your application
 
 ### Heroku App.
 
-Make a commit of your code and create a heroku app by typing the command: `heroku create`
-Once you've done that, upload your code to production: `git push heroku master`
+Make a commit of your code and create a heroku app by typing the command: `heroku create`.
+Once you've done that, upload your code to production: `git push heroku master`.
 
-### Creaing Google Credentials.
+### Creating Google Credentials.
 
 Go to: https://console.cloud.google.com and sign up.
 Go to **API and Services**, click on **Credentials** and select **ID Auth Client**.
@@ -76,7 +76,7 @@ Once you've done that, save and close the file.
 Use this command to see your credetnials: `rails credentials:show`
 
 You can verify your credentials by openning rails console and
-typing the next commands: `Rails.application.credentials.google_id`
+typing the next command: `Rails.application.credentials.google_id`
 
 ## Generate Devise Model.
 
@@ -167,7 +167,7 @@ The file must be like this:
 
 ## Initializers
 
-Go to config/initializers/devise.rb, between the line 274 add the next line:
+Go to config/initializers/devise.rb, between the line 270 and 280 add the next line:
 
 ```
   config.omniauth :google_oauth2, Rails.application.credentials.google_id, Rails.application.credentials.google_secret, access_type: "online"
@@ -189,13 +189,13 @@ end
 
 Type the command: `rails db:migrate`
 
-## That's it!
+### That's it!
  
 Now you can verify its functionality in development.
 
 ## Heroku.
 
-    In order to use the app in production, you should follow the next steps.
+In order to use the app in production, you should follow the next steps.
 
 ### Production.rb file
 
@@ -206,7 +206,7 @@ Within production.rb file add the next line:
 
 ### Master key.
 
-You should create a RAILS_MASTER_KEY variable and add the master key located in your config folder.
+You have to create a RAILS_MASTER_KEY variable and add the master key located in your config folder.
 
 ### Deploying.
 
