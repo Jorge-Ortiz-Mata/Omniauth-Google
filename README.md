@@ -1,24 +1,42 @@
-# README
+# Omniauth Google Account
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app was developed using Ruby on Rails 6.
 
-Things you may want to cover:
+## Software.
 
-* Ruby version
+> Ruby 3.0
+> Ruby on Rails 6.1.4.7
+> Windows 10
+> Heroku App.
+> PostreSQL.
+> VS Code.
 
-* System dependencies
 
-* Configuration
+## Description.
 
-* Database creation
+In order to developed this app, you will need to follow the next steps.
+You must have access to Google Console to create the credentials.
 
-* Database initialization
+### Setting Gemfile.
 
-* How to run the test suite
+First of all, we need to add these gems into our Gemfile
 
-* Services (job queues, cache servers, search engines, etc.)
+* gem "omniauth-rails_csrf_protection"
+* gem 'omniauth-google-oauth2'
+* gem 'devise'
+* gem 'sqlite' <-- Development group.
+* gem 'pg' <-- Production group.
 
-* Deployment instructions
+After that, run the command:
+`bundle install --without production`
 
-* ...
+### Creaing Google Credentials.
+
+Go to: https://console.cloud.google.com and sign up.
+
+Go to API and services and click on credentials
+
+
+## Rails Credentials.
+`EDITOR="code --wait" rails credentials:edit`
+`rails credentials:show`
